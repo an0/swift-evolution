@@ -171,11 +171,13 @@ class C: P {
 
 ## Impact on existing code
 
-With the help of a good migration tool, there will be no impact on existing code at all. And the migration rules are very clear and simple:
+With the help of a good migration tool, there will be no impact on existing code at all. The migration rules are:
 
 * Map `static` to `type` in protocols.
 * Map `static` to `type` in structs and enums.
-* Map `class` to `type` and `static` to `final type` in classes.
+* Map `class` to `type` in classes.
+* Map `static func` to `final type func` in classes.
+* Map `static let` and `static var` to `type let` and `type var` in classes.
 
 One concern I can think of is: because type methods are dynamically dispatched by default in the new design, will we forget to do the `final` optimization so the general performance of Swift code become worse?
 
