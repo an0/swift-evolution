@@ -77,7 +77,7 @@ If we reuse this system for type methods, not only can we have a consistent desi
 
 1. Use the keyword `type` to declare type properties and methods. 
 2. Type properties and methods are overridable hence dynamically dispatched by default. Use the `final` keyword or inferred `final` to make them final and statically dispatched, just like instance properties and methods.
-3. Type properties can be stored or calculated, just like instance properties.
+3. Type properties can be stored or calculated, just like instance properties. Stored type properties are globally stored like global variables — Swift doesn’t support “class instance variables”.
 
 As you can see, it is a very simple and elegant design:
 
